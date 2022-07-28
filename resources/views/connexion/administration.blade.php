@@ -1,0 +1,1 @@
+<h1>Bienvenu {{Auth::user()->prenom}} {{Auth::user()->nom}} sur votre page d'administration</h1>

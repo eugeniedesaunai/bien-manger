@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    background-color: rgb(252, 242, 230);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.flex_column_a_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.height_max {
+    height: 100%;
+}
+
+.flex_column_j_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
