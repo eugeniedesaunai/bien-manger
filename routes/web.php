@@ -24,7 +24,7 @@ Route::get("/recette/{id}", [RecetteController::class, 'voirRecette']);
 Route::get("/ajouter-recette", [RecetteController::class, 'ajouterRecette']);
 Route::post("/ajouter-recette", [RecetteController::class, 'validationRecette']);
 Route::get("/ajouter-recette-ingredient", [RecetteController::class, 'ajouterRecettebis']);
-Route::post("/recette", [RecetteController::class, 'validationRecettebis']);
+Route::post("/recette-ok", [RecetteController::class, 'validationRecettebis']);
 
 
 Route::get("/connexion", [UtilisateurController::class, 'connexion'])->name('login');

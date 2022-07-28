@@ -9,12 +9,17 @@ class IngredientRecette extends Model
 {
     use HasFactory;
 
+    public $table = 'ingredient_recette';
+    public $timestamps = false;
 
-    public function ingredients(){
+
+    public function ingredients()
+    {
         return $this->belongsToMany(Ingredient::class);
     }
 
-    public function recettes(){
+    public function recettes()
+    {
         return $this->belongsToMany(Recette::class);
     }
 }
