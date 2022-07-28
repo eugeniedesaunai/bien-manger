@@ -1,4 +1,6 @@
-<form action="/recette-ok" method="post">
+@extends('layout.template')
+@section('content')
+<form action="" method="post">
     @csrf
     <select name="recette_id" id="recette_id">
         @foreach ($recettes as $recette)
@@ -28,6 +30,6 @@
     </select>
     <p>Quantité <input name="quantite" id="quantite" type="number"> </p>
     <input type="submit">
-
 </form>
+@endsection
 {{$errors}}

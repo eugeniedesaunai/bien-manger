@@ -14,6 +14,7 @@ use App\Http\Requests\IngredientRecetteRequest;
 
 class RecetteController extends Controller
 {
+    // afin d'ajouter une recette
     public function ajouterRecette()
     {
         $saisons = Saison::all('id', 'nom');
@@ -39,6 +40,7 @@ class RecetteController extends Controller
         return redirect('/ajouter-recette-ingredient');
     }
 
+    // afin d'ajouter les ingredients
     public function ajouterRecettebis()
     {
         $ingredients = Ingredient::all('id', 'nom');
@@ -56,9 +58,11 @@ class RecetteController extends Controller
         $ingredients->ingredient_id = $request->ingredient_id;
         $ingredients->save();
 
-        return view('recette.recetteOk', ['ingredients' => $ingredients]);
+        return redirect('/ajouter-recette-etape');
     }
 
+
+    //afin de consulter les recettes
 
     public function voirRecette(int $id)
     {

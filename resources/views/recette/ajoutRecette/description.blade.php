@@ -1,3 +1,5 @@
+@extends('layout.template')
+@section('content')
 <html>
 
 <body>
@@ -34,5 +36,4 @@
 </body>
 
 </html>
-
-{{$errors}}
+@endsection

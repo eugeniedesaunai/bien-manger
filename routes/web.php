@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EtapeController;
 use App\Http\Controllers\RecetteController;
 use App\Http\Controllers\UtilisateurController;
 
@@ -23,8 +24,13 @@ Route::get('/', function () {
 Route::get("/recette/{id}", [RecetteController::class, 'voirRecette']);
 Route::get("/ajouter-recette", [RecetteController::class, 'ajouterRecette']);
 Route::post("/ajouter-recette", [RecetteController::class, 'validationRecette']);
+// ajout des ingrédients
 Route::get("/ajouter-recette-ingredient", [RecetteController::class, 'ajouterRecettebis']);
-Route::post("/recette-ok", [RecetteController::class, 'validationRecettebis']);
+Route::post("/ajouter-recette-ingredient", [RecetteController::class, 'validationRecettebis']);
+// ajout des étapes
+Route::get("/ajouter-recette-etape", [EtapeController::class, 'ajouterEtape']);
+Route::post("/recette-ok", [EtapeController::class, 'validationEtape']);
+
 
 
 Route::get("/connexion", [UtilisateurController::class, 'connexion'])->name('login');

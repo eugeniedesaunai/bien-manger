@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Etape extends Model
 {
     use HasFactory;
+    public $timestamps = false;
 
-    public function recette(){
+    public function recette()
+    {
         return $this->belongsTo(Recette::class);
     }
 }
